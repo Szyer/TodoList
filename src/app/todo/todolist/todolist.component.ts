@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class TodolistComponent {
   buttonText = 'Show Completed Tasks';
   todos$!: Observable<Todo[]>;
-  showAllTodoList = false;
+  showAllTodoList = true;
   constructor(
     private todoService: TodoService,
     private router : Router) { }

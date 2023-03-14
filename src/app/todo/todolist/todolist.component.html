@@ -1,7 +1,7 @@
 <h1>Todo List</h1>
-<button type="button" (click)="toggleAllTasks()" style="margin-left: 50px;">{{buttonText}}</button>
+<button (click)="toggleAllTasks()" class="btn btn-primary"  [routerLink]="['/Todos/CompletedTasks']" style= "margin-left: 50px">{{buttonText}}</button>
+<div *ngIf="!showAllTodoList"> 
 
-<div *ngIf="!showAllTodoList" [routerLink]="['/Todos/CompletedTasks']">
   <router-outlet></router-outlet>
 </div>
 <hr>
@@ -11,7 +11,8 @@
     <div class="col mb-3">
       <div class="card" [routerLink]="['/Todo', todo.id]">
         <div class="card-body" style="height: 100%">
-            <h5 class="card-title">{{ todo.id }}</h5>
+          <h5 class="card-title" [routerLink]="['/Todo', todo.id]">{{todo.id}}</h5>
+
           <p class="card-text">{{todo.title}}</p>
           <a href="/Todos" class="btn btn-primary">{{todo.completed}}</a>
         </div>

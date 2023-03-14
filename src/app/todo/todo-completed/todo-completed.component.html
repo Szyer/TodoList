@@ -2,7 +2,7 @@
 
 <div class="row">
     <ng-container *ngFor="let todo of todos$ | async ">
-      <div class="col-sm-6" *ngIf="todo.completed">
+      <div class="col-sm-6" >
         <div class="card">
           <div class="card-body" style="height: 100%">
             <h5 class="card-title"><a [routerLink]="['/Todo', todo.id]"></a></h5>
