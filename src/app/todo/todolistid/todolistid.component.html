@@ -1,0 +1,27 @@
+<div class="text-center m-3">
+
+<h1>Todo List</h1>
+
+<button class="btn btn-primary btn-lg m-3" [routerLink] = "['/CompletedTasks']"> Completed Tasks </button>
+</div>
+<hr>
+
+
+<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="userID">
+<div class="card-container">
+  <ng-container *ngFor="let todo of todos$ | async">
+    <div class="col mb-3" *ngIf="todo.userId==userID">
+      <div class="card" [routerLink]="['/Todo', todo.id]">
+        <div class="card-body" style="height: 100%">
+            <h5 class="card-title">{{ todo.id }}</h5>
+          <p class="card-text">{{todo.title}}</p>
+          <a href="/Todos" class="btn btn-primary">{{todo.completed}}</a>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+{{userID}}
+<hr>
+
+<button type="button" (click)="goBack()" style="margin-left: 50px;">Go to sidekicks</button>

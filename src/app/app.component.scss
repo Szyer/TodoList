@@ -1,0 +1,13 @@
+.form-inline {
+    display:flex;
+    flex-direction: row; /* reverse the order of the elements */
+    justify-content: flex-end; /* align the elements to the right */
+  }
+  
+  .form-control {
+    margin-right: 10px; /* add some margin to the right of the text field */
+  }
+  
+  .btn {
+    margin-left: 10px; /* add some margin to the left of the button */
+  }

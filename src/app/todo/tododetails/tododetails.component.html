@@ -1,0 +1,13 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<div class="d-flex justify-content-center mt-5" *ngIf="todo$ |async as todo">
+  <div class="col mb-3">
+    <div class="card">
+      <div class="card-body" style="height: 100%">
+        <h5 class="card-title">{{todo.id}}</h5>
+        <p class="card-text">{{todo.title}}</p>
+        <a href="\Todos" class="btn btn-primary">{{todo.completed}}</a>
+      </div>
+    </div>
+  </div>
+</div>
